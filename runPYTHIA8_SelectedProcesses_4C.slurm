@@ -2,8 +2,8 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH --mem-per-cpu=32G
-#SBATCH --time=0-48:00:00
+#SBATCH --mem-per-cpu=4G
+#SBATCH --time=0-12:00:00
 #SBATCH --array=1-20
 #SBATCH --account=cms_stage3
 
