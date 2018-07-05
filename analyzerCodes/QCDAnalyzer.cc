@@ -109,27 +109,7 @@ class QCDAnalyzer : public edm::EDAnalyzer {
 
       Float_t mx1, mx2, hadronPos2, hadronNeg2, posPt, negPt, x1, x2, Q2, ax1, ax2, hadronPos, hadronNeg, cPos, cNeg, temp[5]; 
       int mcount;
-      class IsStateFinal{
 
-	      public:
-		       bool operator()( const HepMC::GenParticle* gp ){
-			       if ( !gp->end_vertex() && gp->status()==1 ) return 1;
-			       return 0;
-		       }
-      };
-
-      // Check if the mother is a quark or a gluon, and the descendant is a hadron
-      class IsFinalStateParton{
-	      public:
-
-		      bool operator()( const HepMC::GenParticle *gp ){
-
-			// also check if the descendants are hadrons
-		      	if(abs(gp->pdg_id()) < 8) return 1;
-			return 0;
-		      }
-
-      };
 
       bool tEnable;
 
